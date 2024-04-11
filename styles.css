@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    color:white;
+    padding:1%;
+    
+    width: 100%; /* Full width for navbar */
+
+}
+
+.navbar-nav{
+    display: flex;
+}
+
+.navbar-nav .nav-item{
+    padding:4%;
+    list-style: none;
+}
+
+.nav-link{
+    font-size:1.3rem;
+    color:white;
+    text-decoration: none;
+    font-family: sans-serif;
+    padding:7px;
+    
+   
+}
+
+
+
+.logo{
+    width:15%;
+}
+
+/* New styles for hamburger menu */
+.navbar-toggle {
+    display: none; /* Initially hidden on larger screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .navbar-nav {
+        display: none; /* Hide nav links on smaller screens */
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        height:100vh;
+    }
+
+    .nav-item {
+        margin: 0;
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    .services{
+        grid-template-columns: 1fr;
+    }
+}
+
+.navbar-nav.active {
+    display: flex;
+    transition: 1s;
+}
+
+
+
+
+
+
+
+.title{
+color:black;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+   
+    
+    
+}
+
+
+.top{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding:5%;
+    text-align: center;
+}
+
+.top input{
+
+    padding:1.2% 8%;
+    background:transparent;
+    border-color: white;
+    outline: none;
+    font-size: 1.3rem;margin-top:2%;
+
+    background:whitesmoke
+}
+.left{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+   
+    padding:5%;
+    text-align: center;
+}
+.right{
+    grid-column-start: 2;
+    grid-column-end: 3;
+   
+    padding:5%;
+    text-align: center;
+}
+
+.search{
+
+    padding:1% 8%;
+    margin-top:2%;
+    background:transparent;
+    border:1px solid white;
+    color:white;
+    border-radius:30px;
+    font-family: sans-serif;
+    font-size: 1.3rem;;
+}
+.search:hover{
+    background:white;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.moon{
+    width:40%;
+}
+
+#bod{
+
+    background:url("bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
